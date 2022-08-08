@@ -17,12 +17,7 @@ app.get("/", (req, res) => {
 const server = http.createServer(app);
 
 //Initialize a variable called io, we create a new instance of a Server we imported from socket.io and pass in the server we created using the http library
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-    method: ["GET", "POST"],
-  },
-});
+const io = new Server(server);
 
 //io.on is used to listen to an event, similar to event listeners in JS
 //If someone connects to the socket io server, io,on we pass it an 'event' we are listening to, in the below case we are listening for a connection. If event is captured
