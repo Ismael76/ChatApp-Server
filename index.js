@@ -19,7 +19,7 @@ const server = http.createServer(app);
 //Initialize a variable called io, we create a new instance of a Server we imported from socket.io and pass in the server we created using the http library
 const io = new Server(server, {
   cors: {
-    origin: "https://livechatbot-app.herokuapp.com/",
+    origin: "*",
     method: ["GET", "POST"],
   },
 });
