@@ -9,6 +9,10 @@ const { Server } = require("socket.io");
 app.use(express.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("Chat App Is Live!");
+});
+
 //We create our server using the http library
 const server = http.createServer(app);
 
