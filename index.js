@@ -56,6 +56,7 @@ io.on("connection", (socket) => {
   });
 });
 
+//always put process.env.PORT BEFORE the ||
 const port = process.env.PORT || 3500;
 
 server.listen(port, () => {
